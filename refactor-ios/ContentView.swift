@@ -13,24 +13,42 @@ struct ContentView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            Text("First View")
+            Text("Track View")
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("first")
-                        Text("First")
+                        Image(systemName: "pencil.and.ellipsis.rectangle")
+                        Text("Track")
                     }
                 }
                 .tag(0)
-            Text("Second View")
+            Text("Measure View")
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("second")
-                        Text("Second")
+                        Image(systemName: "chart.pie.fill")
+                        Text("Measure")
                     }
                 }
                 .tag(1)
+            Text("Motivate View")
+                .font(.title)
+                .tabItem {
+                    VStack {
+                        Image(systemName: "person.3.fill")
+                        Text("Motivate")
+                    }
+                }
+                .tag(2)
+            Text("Core View")
+                .font(.title)
+                .tabItem {
+                    VStack {
+                        Image(systemName: "tv.music.note.fill")
+                        Text("Core")
+                    }
+                }
+                .tag(3)
         }
     }
 }
