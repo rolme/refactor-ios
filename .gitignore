@@ -1,3 +1,6 @@
+# refactor services config file
+config.yml*
+
 # macOS
 .DS_Store
 
@@ -11,3 +14,17 @@ log/
 # Cocoapods
 Pods/
 
+## Obj-C/Swift specific
+*.hmap
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+
+.build/
