@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import AWSMobileClient
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -25,6 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
         let contentView = ContentView().environment(\.managedObjectContext, context)
+        let loginView = LoginView().environment(\.managedObjectContext, context)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
@@ -32,6 +34,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
+        }
+
+        // Set up AWSMobileClient
+        AWSMobileClient.default().initialize { (userState, error) in
+
+            if let userState = userState {
+                switch userState {
+                case .signedOut:
+                    print("User is signed out. Loading Login view...")
+                    self.window?.rootViewController = UIHostingController(rootView: loginView)
+                    self.window?.makeKeyAndVisible()
+
+                case .unknown:
+                    print("Unknown state")
+                default:
+                    print("Default block:")
+                }
+            }
+
+            if let error = error {
+                print("Error setting up AWSMobileClient: \(error.localizedDescription)")
+            }
         }
     }
 

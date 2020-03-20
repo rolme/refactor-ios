@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		07B5CB9582E92179AF8901F8 /* Pods_refactor_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A794674C602A96C46EF6144 /* Pods_refactor_ios.framework */; };
+		B2102341242529BF00940B95 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2102340242529BF00940B95 /* LoginView.swift */; };
+		B2CE9B4323FCE2EF006F5BAD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2CE9B4223FCE2EF006F5BAD /* Login.storyboard */; };
 		BA72E6EE23FAD72F00536A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA72E6ED23FAD72F00536A49 /* AppDelegate.swift */; };
 		BA72E6F023FAD72F00536A49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA72E6EF23FAD72F00536A49 /* SceneDelegate.swift */; };
 		BA72E6F323FAD72F00536A49 /* refactor_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA72E6F123FAD72F00536A49 /* refactor_ios.xcdatamodeld */; };
@@ -40,6 +42,8 @@
 		3B5D61AC5EF0DBABCEB032D9 /* Pods-refactor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-refactor-ios.debug.xcconfig"; path = "Target Support Files/Pods-refactor-ios/Pods-refactor-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		4A794674C602A96C46EF6144 /* Pods_refactor_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_refactor_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D89D9C5B6D21FE88F859834 /* Pods-refactor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-refactor-ios.release.xcconfig"; path = "Target Support Files/Pods-refactor-ios/Pods-refactor-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B2102340242529BF00940B95 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B2CE9B4223FCE2EF006F5BAD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BA72E6EA23FAD72F00536A49 /* refactor-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "refactor-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA72E6ED23FAD72F00536A49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA72E6EF23FAD72F00536A49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				BA72E6FE23FAD73000536A49 /* Info.plist */,
 				BA72E6F123FAD72F00536A49 /* refactor_ios.xcdatamodeld */,
 				BA72E6F823FAD73000536A49 /* Preview Content */,
+				B2CE9B4223FCE2EF006F5BAD /* Login.storyboard */,
+				B2102340242529BF00940B95 /* LoginView.swift */,
 			);
 			path = "refactor-ios";
 			sourceTree = "<group>";
@@ -160,7 +166,6 @@
 				3B5D61AC5EF0DBABCEB032D9 /* Pods-refactor-ios.debug.xcconfig */,
 				6D89D9C5B6D21FE88F859834 /* Pods-refactor-ios.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -270,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CE9B4323FCE2EF006F5BAD /* Login.storyboard in Resources */,
 				BA72E6FD23FAD73000536A49 /* LaunchScreen.storyboard in Resources */,
 				BA72E6FA23FAD73000536A49 /* Preview Assets.xcassets in Resources */,
 				BA72E6F723FAD73000536A49 /* Assets.xcassets in Resources */,
@@ -342,6 +348,7 @@
 				BA72E6F323FAD72F00536A49 /* refactor_ios.xcdatamodeld in Sources */,
 				BA72E6EE23FAD72F00536A49 /* AppDelegate.swift in Sources */,
 				BA72E6F523FAD72F00536A49 /* ContentView.swift in Sources */,
+				B2102341242529BF00940B95 /* LoginView.swift in Sources */,
 				BA72E6F023FAD72F00536A49 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
