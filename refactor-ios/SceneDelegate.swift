@@ -43,7 +43,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 switch userState {
                 case .signedOut:
                     print("User is signed out. Loading Login view...")
-                    window?.rootViewController = UIHostingController(rootView: loginView)
+                    self.window?.rootViewController = UIHostingController(rootView: loginView)
+                    self.window?.makeKeyAndVisible()
 
                 case .unknown:
                     print("Unknown state")
