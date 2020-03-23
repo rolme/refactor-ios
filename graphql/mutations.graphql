@@ -1,0 +1,909 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateHabit(
+  $category: Category!
+  $description: String!
+  $enableWeekends: Boolean
+  $id: ID
+  $place: String
+  $time: String
+  $trigger: String
+  $userId: ID
+  $why: String
+) {
+  createHabit(
+    category: $category
+    description: $description
+    enableWeekends: $enableWeekends
+    id: $id
+    place: $place
+    time: $time
+    trigger: $trigger
+    userId: $userId
+    why: $why
+  ) {
+    category
+    createdAt
+    deletedAt
+    description
+    enableWeekends
+    id
+    place
+    sort
+    tasks {
+      completed
+      completionDate
+      createdAt
+      difficulty
+      habit {
+        category
+        createdAt
+        deletedAt
+        description
+        enableWeekends
+        id
+        place
+        sort
+        tasks {
+          completed
+          completionDate
+          createdAt
+          difficulty
+          id
+          rating
+          updatedAt
+          version
+        }
+        time
+        trigger
+        updatedAt
+        userId
+        user {
+          createdAt
+          email
+          expiresAt
+          id
+          name
+          role
+          status
+          updatedAt
+          welcomeSentAt
+        }
+        why
+      }
+      id
+      rating
+      updatedAt
+      version
+    }
+    time
+    trigger
+    updatedAt
+    userId
+    user {
+      avatar {
+        ...S3Object
+      }
+      createdAt
+      email
+      expiresAt
+      habits {
+        category
+        createdAt
+        deletedAt
+        description
+        enableWeekends
+        id
+        place
+        sort
+        tasks {
+          completed
+          completionDate
+          createdAt
+          difficulty
+          id
+          rating
+          updatedAt
+          version
+        }
+        time
+        trigger
+        updatedAt
+        userId
+        user {
+          createdAt
+          email
+          expiresAt
+          id
+          name
+          role
+          status
+          updatedAt
+          welcomeSentAt
+        }
+        why
+      }
+      id
+      name
+      profile {
+        address {
+          country
+          locality
+          postalCode
+          region
+          street
+        }
+        phone
+        title
+        website
+      }
+      role
+      status
+      updatedAt
+      welcomeSentAt
+    }
+    why
+  }
+}
+mutation CreateTask(
+  $completed: Boolean!
+  $completionDate: String!
+  $difficulty: Int
+  $habitId: ID!
+  $id: ID
+  $rating: Int
+) {
+  createTask(
+    completed: $completed
+    completionDate: $completionDate
+    difficulty: $difficulty
+    habitId: $habitId
+    id: $id
+    rating: $rating
+  ) {
+    completed
+    completionDate
+    createdAt
+    difficulty
+    habit {
+      category
+      createdAt
+      deletedAt
+      description
+      enableWeekends
+      id
+      place
+      sort
+      tasks {
+        completed
+        completionDate
+        createdAt
+        difficulty
+        habit {
+          category
+          createdAt
+          deletedAt
+          description
+          enableWeekends
+          id
+          place
+          sort
+          time
+          trigger
+          updatedAt
+          userId
+          why
+        }
+        id
+        rating
+        updatedAt
+        version
+      }
+      time
+      trigger
+      updatedAt
+      userId
+      user {
+        avatar {
+          ...S3Object
+        }
+        createdAt
+        email
+        expiresAt
+        habits {
+          category
+          createdAt
+          deletedAt
+          description
+          enableWeekends
+          id
+          place
+          sort
+          time
+          trigger
+          updatedAt
+          userId
+          why
+        }
+        id
+        name
+        profile {
+          phone
+          title
+          website
+        }
+        role
+        status
+        updatedAt
+        welcomeSentAt
+      }
+      why
+    }
+    id
+    rating
+    updatedAt
+    version
+  }
+}
+mutation DeleteHabit($id: ID!, $userId: ID) {
+  deleteHabit(id: $id, userId: $userId) {
+    category
+    createdAt
+    deletedAt
+    description
+    enableWeekends
+    id
+    place
+    sort
+    tasks {
+      completed
+      completionDate
+      createdAt
+      difficulty
+      habit {
+        category
+        createdAt
+        deletedAt
+        description
+        enableWeekends
+        id
+        place
+        sort
+        tasks {
+          completed
+          completionDate
+          createdAt
+          difficulty
+          id
+          rating
+          updatedAt
+          version
+        }
+        time
+        trigger
+        updatedAt
+        userId
+        user {
+          createdAt
+          email
+          expiresAt
+          id
+          name
+          role
+          status
+          updatedAt
+          welcomeSentAt
+        }
+        why
+      }
+      id
+      rating
+      updatedAt
+      version
+    }
+    time
+    trigger
+    updatedAt
+    userId
+    user {
+      avatar {
+        ...S3Object
+      }
+      createdAt
+      email
+      expiresAt
+      habits {
+        category
+        createdAt
+        deletedAt
+        description
+        enableWeekends
+        id
+        place
+        sort
+        tasks {
+          completed
+          completionDate
+          createdAt
+          difficulty
+          id
+          rating
+          updatedAt
+          version
+        }
+        time
+        trigger
+        updatedAt
+        userId
+        user {
+          createdAt
+          email
+          expiresAt
+          id
+          name
+          role
+          status
+          updatedAt
+          welcomeSentAt
+        }
+        why
+      }
+      id
+      name
+      profile {
+        address {
+          country
+          locality
+          postalCode
+          region
+          street
+        }
+        phone
+        title
+        website
+      }
+      role
+      status
+      updatedAt
+      welcomeSentAt
+    }
+    why
+  }
+}
+mutation DeleteTask($id: ID!) {
+  deleteTask(id: $id) {
+    completed
+    completionDate
+    createdAt
+    difficulty
+    habit {
+      category
+      createdAt
+      deletedAt
+      description
+      enableWeekends
+      id
+      place
+      sort
+      tasks {
+        completed
+        completionDate
+        createdAt
+        difficulty
+        habit {
+          category
+          createdAt
+          deletedAt
+          description
+          enableWeekends
+          id
+          place
+          sort
+          time
+          trigger
+          updatedAt
+          userId
+          why
+        }
+        id
+        rating
+        updatedAt
+        version
+      }
+      time
+      trigger
+      updatedAt
+      userId
+      user {
+        avatar {
+          ...S3Object
+        }
+        createdAt
+        email
+        expiresAt
+        habits {
+          category
+          createdAt
+          deletedAt
+          description
+          enableWeekends
+          id
+          place
+          sort
+          time
+          trigger
+          updatedAt
+          userId
+          why
+        }
+        id
+        name
+        profile {
+          phone
+          title
+          website
+        }
+        role
+        status
+        updatedAt
+        welcomeSentAt
+      }
+      why
+    }
+    id
+    rating
+    updatedAt
+    version
+  }
+}
+mutation DeleteUser {
+  deleteUser {
+    avatar {
+      ...S3Object
+    }
+    createdAt
+    email
+    expiresAt
+    habits {
+      category
+      createdAt
+      deletedAt
+      description
+      enableWeekends
+      id
+      place
+      sort
+      tasks {
+        completed
+        completionDate
+        createdAt
+        difficulty
+        habit {
+          category
+          createdAt
+          deletedAt
+          description
+          enableWeekends
+          id
+          place
+          sort
+          time
+          trigger
+          updatedAt
+          userId
+          why
+        }
+        id
+        rating
+        updatedAt
+        version
+      }
+      time
+      trigger
+      updatedAt
+      userId
+      user {
+        avatar {
+          ...S3Object
+        }
+        createdAt
+        email
+        expiresAt
+        habits {
+          category
+          createdAt
+          deletedAt
+          description
+          enableWeekends
+          id
+          place
+          sort
+          time
+          trigger
+          updatedAt
+          userId
+          why
+        }
+        id
+        name
+        profile {
+          phone
+          title
+          website
+        }
+        role
+        status
+        updatedAt
+        welcomeSentAt
+      }
+      why
+    }
+    id
+    name
+    profile {
+      address {
+        country
+        locality
+        postalCode
+        region
+        street
+      }
+      phone
+      title
+      website
+    }
+    role
+    status
+    updatedAt
+    welcomeSentAt
+  }
+}
+mutation UpdateHabit(
+  $category: Category
+  $description: String
+  $enableWeekends: Boolean
+  $id: ID!
+  $place: String
+  $time: String
+  $trigger: String
+  $userId: String
+  $why: String
+) {
+  updateHabit(
+    category: $category
+    description: $description
+    enableWeekends: $enableWeekends
+    id: $id
+    place: $place
+    time: $time
+    trigger: $trigger
+    userId: $userId
+    why: $why
+  ) {
+    category
+    createdAt
+    deletedAt
+    description
+    enableWeekends
+    id
+    place
+    sort
+    tasks {
+      completed
+      completionDate
+      createdAt
+      difficulty
+      habit {
+        category
+        createdAt
+        deletedAt
+        description
+        enableWeekends
+        id
+        place
+        sort
+        tasks {
+          completed
+          completionDate
+          createdAt
+          difficulty
+          id
+          rating
+          updatedAt
+          version
+        }
+        time
+        trigger
+        updatedAt
+        userId
+        user {
+          createdAt
+          email
+          expiresAt
+          id
+          name
+          role
+          status
+          updatedAt
+          welcomeSentAt
+        }
+        why
+      }
+      id
+      rating
+      updatedAt
+      version
+    }
+    time
+    trigger
+    updatedAt
+    userId
+    user {
+      avatar {
+        ...S3Object
+      }
+      createdAt
+      email
+      expiresAt
+      habits {
+        category
+        createdAt
+        deletedAt
+        description
+        enableWeekends
+        id
+        place
+        sort
+        tasks {
+          completed
+          completionDate
+          createdAt
+          difficulty
+          id
+          rating
+          updatedAt
+          version
+        }
+        time
+        trigger
+        updatedAt
+        userId
+        user {
+          createdAt
+          email
+          expiresAt
+          id
+          name
+          role
+          status
+          updatedAt
+          welcomeSentAt
+        }
+        why
+      }
+      id
+      name
+      profile {
+        address {
+          country
+          locality
+          postalCode
+          region
+          street
+        }
+        phone
+        title
+        website
+      }
+      role
+      status
+      updatedAt
+      welcomeSentAt
+    }
+    why
+  }
+}
+mutation UpdateTask(
+  $completed: Boolean!
+  $completionDate: String
+  $difficulty: Int
+  $id: ID!
+  $rating: Int
+) {
+  updateTask(
+    completed: $completed
+    completionDate: $completionDate
+    difficulty: $difficulty
+    id: $id
+    rating: $rating
+  ) {
+    completed
+    completionDate
+    createdAt
+    difficulty
+    habit {
+      category
+      createdAt
+      deletedAt
+      description
+      enableWeekends
+      id
+      place
+      sort
+      tasks {
+        completed
+        completionDate
+        createdAt
+        difficulty
+        habit {
+          category
+          createdAt
+          deletedAt
+          description
+          enableWeekends
+          id
+          place
+          sort
+          time
+          trigger
+          updatedAt
+          userId
+          why
+        }
+        id
+        rating
+        updatedAt
+        version
+      }
+      time
+      trigger
+      updatedAt
+      userId
+      user {
+        avatar {
+          ...S3Object
+        }
+        createdAt
+        email
+        expiresAt
+        habits {
+          category
+          createdAt
+          deletedAt
+          description
+          enableWeekends
+          id
+          place
+          sort
+          time
+          trigger
+          updatedAt
+          userId
+          why
+        }
+        id
+        name
+        profile {
+          phone
+          title
+          website
+        }
+        role
+        status
+        updatedAt
+        welcomeSentAt
+      }
+      why
+    }
+    id
+    rating
+    updatedAt
+    version
+  }
+}
+mutation UpdateUser(
+  $avatar: S3ObjectInput
+  $email: String
+  $name: String
+  $profile: ProfileInput
+) {
+  updateUser(avatar: $avatar, email: $email, name: $name, profile: $profile) {
+    avatar {
+      ...S3Object
+    }
+    createdAt
+    email
+    expiresAt
+    habits {
+      category
+      createdAt
+      deletedAt
+      description
+      enableWeekends
+      id
+      place
+      sort
+      tasks {
+        completed
+        completionDate
+        createdAt
+        difficulty
+        habit {
+          category
+          createdAt
+          deletedAt
+          description
+          enableWeekends
+          id
+          place
+          sort
+          time
+          trigger
+          updatedAt
+          userId
+          why
+        }
+        id
+        rating
+        updatedAt
+        version
+      }
+      time
+      trigger
+      updatedAt
+      userId
+      user {
+        avatar {
+          ...S3Object
+        }
+        createdAt
+        email
+        expiresAt
+        habits {
+          category
+          createdAt
+          deletedAt
+          description
+          enableWeekends
+          id
+          place
+          sort
+          time
+          trigger
+          updatedAt
+          userId
+          why
+        }
+        id
+        name
+        profile {
+          phone
+          title
+          website
+        }
+        role
+        status
+        updatedAt
+        welcomeSentAt
+      }
+      why
+    }
+    id
+    name
+    profile {
+      address {
+        country
+        locality
+        postalCode
+        region
+        street
+      }
+      phone
+      title
+      website
+    }
+    role
+    status
+    updatedAt
+    welcomeSentAt
+  }
+}

@@ -35,3 +35,18 @@ After installation, you can start the workspace in you terminal
 ```sh
 open refactor-ios.xcworkspace
 ```
+
+#### Generating GraphQL code
+
+```sh
+amplify codegen add
+
+? Choose the type of app that you're building ios
+? Enter the file name pattern of graphql queries, mutations and subscriptions ./*.graphql
+? Do you want to generate/update all possible GraphQL operations - queries, mutations and subscriptions Yes
+? Enter maximum statement depth [increase from default if your schema is deeply nested] 4
+? Enter the file name for the generated code API.swift
+? Do you want to generate code for your newly created GraphQL API Yes
+✔ Generated GraphQL operations successfully and saved at graphql
+✔ Code generated successfully and saved in file API.swift
+```
