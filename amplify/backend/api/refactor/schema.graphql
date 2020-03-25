@@ -1,0 +1,105 @@
+##### Enumarations
+
+enum UserStatus {
+  EXPIRED
+  GENERAL
+  SUBSCRIBER
+  TRIAL
+}
+
+enum Category {
+  EAT
+  FOCUS
+  MOVE
+  SLEEP
+}
+
+input AddressInput {
+  country: String
+  locality: String
+  postalCode: String
+  region: String
+  street: [String]!
+}
+
+input ProfileInput {
+  address: AddressInput
+  email: String
+  title: String
+  website: String
+}
+
+input S3ObjectInput {
+  bucket: String!
+  key: String!
+  localUri: String
+  mimeType: String!
+  region: String!
+}
+
+type Address {
+  country: String
+  locality: String
+  postalCode: String
+  region: String
+  street: [String]
+}
+
+type Habit {
+  category: Category!
+  createdAt: String!
+  deletedAt: String
+  description: String!
+  enableWeekends: Boolean
+  id: ID!
+  place: String
+  sort: String!
+  tasks: [Task!]!
+  time: String!
+  trigger: String
+  updatedAt: String!
+  userId: ID!
+  user: User!
+  why: String
+}
+
+type Profile {
+  address: Address
+  phone: String
+  title: String
+  website: String
+}
+
+type S3Object {
+  bucket: String!
+  key: String!
+  region: String!
+  mimeType: String!
+}
+
+type User {
+  avatar: S3Object
+  createdAt: String!
+  email: String!
+  expiresAt: String
+  habits: [Habit!]!
+  id: ID!
+  name: String
+  profile: Profile
+  role: String!
+  status: UserStatus!
+  updatedAt: String!
+  welcomeSentAt: String
+}
+
+type Task {
+  completed: Boolean!
+  completionDate: String!
+  createdAt: String!
+  difficulty: Int
+  habit: Habit!
+  id: ID!
+  rating: Int
+  updatedAt: String!
+  version: String
+}
