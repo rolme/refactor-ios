@@ -1,13 +1,8 @@
 {
-    "projectName": "amplifyStarter",
+    "projectName": "refactor-ios",
     "version": "3.0",
-    "frontend": "android",
+    "frontend": "ios",
     "providers": [
         "awscloudformation"
-    ],
-    "android": {
-        "config": {
-            "ResDir": "app/src/main/res"
-        }
-    }
+    ]
 }
