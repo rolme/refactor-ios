@@ -12,6 +12,7 @@ Refactor Daily mobile application for iOS.
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
 - [CocoaPods](https://guides.cocoapods.org/using/getting-started.html)
+- [Node](https://nodejs.org/en/)
 
 ### Installation
 
