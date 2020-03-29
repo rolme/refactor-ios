@@ -6,9 +6,6 @@
       "Region": "[ios.awsRegion]"
     }
   },
-  "IdentityManager": {
-    "Default": {}
-  },
   "CredentialsProvider": {
     "CognitoIdentity": {
       "Default": {
@@ -23,5 +20,10 @@
       "AppClientId": "[ios.cognitoUserPoolClientId]",
       "Region": "[ios.awsRegion]"
     }
-  }
+  },
+  "IdentityManager": {
+    "Default": {}
+  },
+  "UserAgent": "aws-amplify/cli",
+  "Version": "0.1.0"
 }
