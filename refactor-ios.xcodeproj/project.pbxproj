@@ -19,6 +19,9 @@
 		BA72E6FD23FAD73000536A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA72E6FB23FAD73000536A49 /* LaunchScreen.storyboard */; };
 		BA72E70823FAD73000536A49 /* refactor_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA72E70723FAD73000536A49 /* refactor_iosTests.swift */; };
 		BA72E71323FAD73000536A49 /* refactor_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA72E71223FAD73000536A49 /* refactor_iosUITests.swift */; };
+		BAB09E2B244DDC9A00A133C0 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BAB09E2A244DDC9A00A133C0 /* awsconfiguration.json */; };
+		BAB09E2C244DDCE100A133C0 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BAB09E2A244DDC9A00A133C0 /* awsconfiguration.json */; };
+		BAB09E2D244DDCE100A133C0 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BAB09E2A244DDC9A00A133C0 /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,7 @@
 		BA72E70E23FAD73000536A49 /* refactor-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "refactor-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA72E71223FAD73000536A49 /* refactor_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = refactor_iosUITests.swift; sourceTree = "<group>"; };
 		BA72E71423FAD73000536A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB09E2A244DDC9A00A133C0 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		BA72E6EC23FAD72F00536A49 /* refactor-ios */ = {
 			isa = PBXGroup;
 			children = (
+				BAB09E2A244DDC9A00A133C0 /* awsconfiguration.json */,
 				BA72E6ED23FAD72F00536A49 /* AppDelegate.swift */,
 				BA72E6EF23FAD72F00536A49 /* SceneDelegate.swift */,
 				BA72E6F423FAD72F00536A49 /* ContentView.swift */,
@@ -275,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB09E2B244DDC9A00A133C0 /* awsconfiguration.json in Resources */,
 				B2CE9B4323FCE2EF006F5BAD /* Login.storyboard in Resources */,
 				BA72E6FD23FAD73000536A49 /* LaunchScreen.storyboard in Resources */,
 				BA72E6FA23FAD73000536A49 /* Preview Assets.xcassets in Resources */,
@@ -286,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB09E2C244DDCE100A133C0 /* awsconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB09E2D244DDCE100A133C0 /* awsconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
