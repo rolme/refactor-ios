@@ -2,10 +2,13 @@
 target 'refactor-ios' do
     use_frameworks!
 
-    pod 'amplify-tools'
-    pod 'Amplify'
-    pod 'AWSPluginsCore'
-    pod 'AmplifyPlugins/AWSAPIPlugin'
     pod 'AWSAppSync', '~> 3.0.0'
-    pod 'Firebase/Analytics'
+
+    pod 'AWSMobileClient'
+    pod 'AWSAuthUI'
+    pod 'AWSUserPoolsSignIn'
+
+    # Build tools
+    pod 'SwiftFormat/CLI'
+    pod 'SwiftLint'
 end

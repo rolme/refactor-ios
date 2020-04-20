@@ -26,7 +26,7 @@ cd refactor-ios
 Install core dependencies and bootstrap the project:
 
 ```sh
-npm install -g @aws-amplify/cli     # may require sudo
+npm install -g aws-appsync-codegen
 pod install
 ```
 
@@ -40,10 +40,10 @@ open refactor-ios.xcworkspace
 
 ## Generating Swift code
 
-If there are updates to `operations.graphql`, `schema.json`, or `schema.graphql`, you can run the following to generate new Swift code.
+If there are updates to `operations.graphql` or `schema.json`, you can run the following to generate new Swift code.
 
 ```sh
-amplify codegen
+cd refactor-ios && aws-appsync-codegen generate operations.graphql --schema schema.json --output API.swift
 ```
 
 ## Other Guides
