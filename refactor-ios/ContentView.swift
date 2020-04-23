@@ -11,63 +11,70 @@ import AWSMobileClient
 
 struct ContentView: View {
     @State private var selection = 0
+    @State private var showLoginView = false
  
     var body: some View {
         VStack {
-            NavigationView {
-                Text("SwiftUI")
-                    .navigationBarTitle("Welcome")
-                    .navigationBarItems(leading: Button("Logout") {
-                        logout()
-                    })
-            }
-            TabView(selection: $selection){
-                Text("Track View")
-                    .font(.title)
-                    .tabItem {
-                        VStack {
-                            Image(systemName: "pencil.and.ellipsis.rectangle")
-                            Text("Track")
+            if showLoginView {
+                LoginView()
+                    .animation(.spring())
+                    .transition(.slide)
+            } else {
+                NavigationView {
+                    Text("SwiftUI")
+                        .navigationBarTitle("Welcome")
+                        .navigationBarItems(leading: Button("Logout") {
+                            self.showLoginView = logout()
+                        })
+                }
+                TabView(selection: $selection){
+                    Text("Track View")
+                        .font(.title)
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "pencil.and.ellipsis.rectangle")
+                                Text("Track")
+                            }
                         }
-                    }
-                    .tag(0)
-                Text("Measure View")
-                    .font(.title)
-                    .tabItem {
-                        VStack {
-                            Image(systemName: "chart.pie.fill")
-                            Text("Measure")
+                        .tag(0)
+                    Text("Measure View")
+                        .font(.title)
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "chart.pie.fill")
+                                Text("Measure")
+                            }
                         }
-                    }
-                    .tag(1)
-                Text("Motivate View")
-                    .font(.title)
-                    .tabItem {
-                        VStack {
-                            Image(systemName: "person.3.fill")
-                            Text("Motivate")
+                        .tag(1)
+                    Text("Motivate View")
+                        .font(.title)
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "person.3.fill")
+                                Text("Motivate")
+                            }
                         }
-                    }
-                    .tag(2)
-                Text("Core View")
-                    .font(.title)
-                    .tabItem {
-                        VStack {
-                            Image(systemName: "tv.music.note.fill")
-                            Text("Core")
+                        .tag(2)
+                    Text("Core View")
+                        .font(.title)
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "tv.music.note.fill")
+                                Text("Core")
+                            }
                         }
-                    }
-                    .tag(3)
+                        .tag(3)
+                }
             }
         }
 
     }
 }
 
-func logout() {
+func logout() -> Bool {
     print("Logout tapped!")
     AWSMobileClient.default().signOut()
-//    TODO: load the signin screen
+    return true
 }
 
 struct ContentView_Previews: PreviewProvider {
