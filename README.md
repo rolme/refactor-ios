@@ -10,9 +10,23 @@ Refactor Daily mobile application for iOS.
 
 ### Prerequisites
 
+- [asdf](https://asdf-vm.com/#/core-manage-asdf-vm): single CLI to manage runtime environments like nodejs, python, etc.
+- [node 14.3](https://nodejs.org)
+- [ruby 2.7](https://www.ruby-lang.org/en/news/2020/03/31/ruby-2-7-1-released/)
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
 - [CocoaPods](https://guides.cocoapods.org/using/getting-started.html)
-- [Node 12](https://treehouse.github.io/installation-guides/mac/node-mac.html)
+
+Verify your tooling setup by running
+
+```sh
+asdf current
+```
+
+It should match closely to the following
+```sh
+nodejs         14.3.0   (set by ./refactor-ios/.tool-versions)
+ruby           2.7.1    (set by ./refactor-ios/.tool-versions)
+```
 
 ### Setup
 
@@ -27,6 +41,7 @@ Install core dependencies and bootstrap the project:
 
 ```sh
 npm install -g aws-appsync-codegen
+gem install cocoapods
 pod install
 ```
 
